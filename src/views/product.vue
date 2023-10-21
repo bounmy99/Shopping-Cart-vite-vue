@@ -18,9 +18,9 @@
         </div>
     </div>
     </div>
-    <div class="d-flex justify-content-center mt-3" v-if="Search_product.length == 0">
+   <!--  <div class="d-flex justify-content-center mt-3" v-if="Search_product.length == 0">
         <h3>ບໍ່ມີຂໍ້ມູນທີ່ຄົ້ນຫາ.....</h3>
-    </div>
+    </div> -->
 </template>
 
 <script setup>

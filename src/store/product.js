@@ -22,7 +22,7 @@ export const useProductStore = defineStore('useProductStore',()=>{
 
     const search_products = computed(()=>{
         
-        if(input.value.length < 2 ) return Products.value;
+        if(input.value.length < 0 ) return Products.value;
 
         return Products.value.filter((pro)=>{
             if(pro.title.toLowerCase().includes(input.value.toLowerCase()) == false){

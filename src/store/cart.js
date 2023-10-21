@@ -74,6 +74,10 @@ export const useCartStore = defineStore("useCartStore", () => {
     return  cart.value.reduce((sum,pro) => sum + pro.price * pro.quantity,0)
   })
 
+  const total_qty = computed(()=>{
+    return cart.value.reduce((sum,qty)=> sum + qty.quantity,0)
+  })
+
   const increment_quantity = (i)=>{
       cart.value[i].quantity +=1;
       saveTolocalStore();
@@ -146,6 +150,7 @@ export const useCartStore = defineStore("useCartStore", () => {
     remove_cart,
     clear_cart,
     add_cart_detail,
-    total 
+    total,
+    total_qty 
   };
 });

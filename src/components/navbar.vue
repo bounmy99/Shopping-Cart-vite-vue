@@ -11,7 +11,13 @@
             <router-link class="nav-link" aria-current="page" to="/">ໜ້າທຳອິດ</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/products_carts">ໜ້າກະຕ່າສິນຄ້າ</router-link>
+            <router-link class="nav-link position-relative" to="/products_carts">
+              ໜ້າກະຕ່າສິນຄ້າ
+              <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+              </span>
+            </router-link>
           </li>
         </ul>
         <div class="d-flex" role="search">
@@ -25,4 +31,5 @@
 <script setup>
     import { useProductStore } from '../store/product';
     const products_store = useProductStore();
+    const alert = true
 </script>
